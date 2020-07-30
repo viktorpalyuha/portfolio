@@ -1,0 +1,137 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+}
+
+.wrapper {
+  grid-template-areas:
+    "h h h"
+    "m m m"
+    "f f f";
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header {
+  grid-area: h;
+  background-image: url("../img/header-background.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul li {
+  margin-right: 3%;
+  margin-top: 1%;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.header_inner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  flex-direction: column;
+}
+
+.header_main__image {
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.header_main__image img {
+  border-radius: 50%;
+  height: auto;
+  width: 100%;
+  box-shadow: 0px 0px 0px 9px rgba(255,255,255, .08);
+}
+
+.header_main__name {
+  margin-top: 7%;
+  margin-bottom: 7%;
+}
+
+.header_main__name h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.header_main__name span {
+  color: #ffb6b3;
+}
+
+.header_main__animated-text {
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.header_main__animated-text span {
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.header_footer__arrow {
+  position: absolute;
+  width: 16px;
+  height: 20px;
+  top: 150%;
+  background-image: url(../img/down-arrow.png);
+  background-size: contain;
+  color: white;
+  font-size: 10px;
+}
+
+.header_footer__bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+main {
+  grid-area: m;
+  background-color: white;
+  height: 1000px;
+}
+
+footer {
+  grid-area: f;
+  background-color: blue;
+  height: 1000px;
+}
