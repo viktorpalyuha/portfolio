@@ -1,4 +1,8 @@
 @media (max-width: 450px) {
+    header {
+        background-attachment: scroll;
+    }
+    
     .header_inner-wrapper {
         top: 25%;
     }
