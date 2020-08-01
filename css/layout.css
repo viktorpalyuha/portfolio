@@ -1,0 +1,22 @@
+@media (max-width: 450px) {
+    .header_inner-wrapper {
+        top: 30%;
+    }
+
+    .header_main__image {
+        height: 150px;
+        width: 150px;
+    }
+
+    .header_main__name h1 {
+        font-size: 2rem;
+    }
+
+    .header_main__animated-text {
+        font-size: 1rem;
+    }
+
+    .header_footer__arrow {
+        top: 170%;
+    }
+}
