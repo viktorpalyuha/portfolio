@@ -1,7 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
 :root {
   --scroll-behavior: smooth;
   scroll-behavior: smooth;
   background-color: black;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 * {
@@ -43,13 +52,17 @@
 
 .wrapper__animate {
   position: relative;
-  animation-name: animateWrapper ;
-  animation-duration: 1s
+  animation-name: animateWrapper;
+  animation-duration: 1s;
 }
 
-@keyframes animateWrapper { 
-  from{opacity:0 } 
-  to{ opacity:1 }
+@keyframes animateWrapper {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 header {
@@ -63,20 +76,105 @@ header {
   min-height: 100vh;
 }
 
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  padding: 2% 1%;
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  z-index: 2;
+  animation-name: fadeOutNav;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutNav {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+nav:after {
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgb(165, 165, 165),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -moz-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -ms-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 100%;
+  content: "";
+  bottom: 0;
+}
+
+.header__logo {
+  margin-left: 18%;
+  color: rgba(0, 0, 0, 0.9);
+  letter-spacing: 3px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
 ul {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
+  padding: 0px;
 }
 
 ul li {
   margin-right: 3%;
-  margin-top: 1%;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+ul li:last-child {
+  margin-right: 18%;
 }
 
 ul li a {
   text-decoration: none;
-  color: white;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  opacity: 0.8;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
 }
 
 .header_inner-wrapper {
