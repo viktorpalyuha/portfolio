@@ -19,16 +19,15 @@ typewriter
 
 function scrollFunction() {
   if (
-    document.body.scrollTop >= 350 ||
-    document.documentElement.scrollTop >= 350
+    document.body.scrollTop >= 400 ||
+    document.documentElement.scrollTop >= 400
   ) {
-    document.querySelector("nav").style.animationName = "fadeInNav";
-    document.querySelector("nav").style.display = "grid";
+    document.querySelector("nav").classList.remove("hidden");
+    document.querySelector("nav").classList.add("visible");
   } else {
-    document.querySelector("nav").style.animationName = "fadeOutNav";
-    setTimeout(() => {
-      document.querySelector("nav").style.display = "";
-    }, 500);
+
+    document.querySelector("nav").classList.remove("visible");
+    document.querySelector("nav").classList.add("hidden");
   }
 }
 
