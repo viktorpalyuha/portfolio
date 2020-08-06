@@ -17,7 +17,7 @@ typewriter
   .typeString("eloper")
   .start();
 
-window.addEventListener("scroll",function scrollFunction() {
+window.addEventListener("scroll", function scrollFunction() {
   if (
     document.body.scrollTop >= 400 ||
     document.documentElement.scrollTop >= 400
@@ -44,10 +44,10 @@ for (let i = 0; i < navItems.length; i++) {
 }
 
 document.querySelector(".header__logo > svg").addEventListener("click", () => {
-  document.querySelector(".header__logo > svg").classList.toggle('active');
-  if(document.querySelector("nav ul").style.display == "flex"){
-    document.querySelector("nav ul").style.display = "none";
-  } else {
-    document.querySelector("nav ul").style.display = "flex";
+  document.querySelector(".header__logo > svg").classList.toggle("active");
+  if (document.querySelector("nav ul").style.height == "211px") {
+    document.querySelector("nav ul").style.height = "0px";
+  } else{
+    document.querySelector("nav ul").style.height = "211px";
   }
-})
+});
