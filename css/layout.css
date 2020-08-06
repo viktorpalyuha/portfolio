@@ -24,3 +24,37 @@
         top: 170%;
     }
 }
+
+@media (max-width: 750px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding: 15 16;
+    }
+
+    .header__logo {
+        margin: 0;
+        padding: 10px 10px;
+    }
+    
+    .ham {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    ul:before {
+        display: block;
+    }
+
+    ul li {
+        padding: 12px 10px;
+    }
+
+    ul li:last-child {
+        margin: 0;
+    }
+}
