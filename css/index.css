@@ -172,11 +172,11 @@ nav:after {
 }
 
 .line {
-  fill:none;
+  fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke:#000;
+  stroke: #000;
   stroke-width: 3;
-  stroke-linecap:round;
+  stroke-linecap: round;
 }
 
 .ham1 .top {
@@ -238,17 +238,17 @@ ul:before {
   top: 0;
 }
 
-ul li {
+nav ul li {
   margin-right: 3%;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
-ul li:last-child {
+nav ul li:last-child {
   margin-right: 18%;
 }
 
-ul li a {
+nav ul li a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
@@ -258,7 +258,7 @@ ul li a {
   transition: opacity 0.2s linear;
 }
 
-ul li a:hover {
+nav ul li a:hover {
   opacity: 1;
 }
 
@@ -350,8 +350,149 @@ main {
   height: 1000px;
 }
 
+.about_inner-wrapper {
+  padding: 80px 5%;
+}
+
+.about_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.sup-h2 {
+  padding-bottom: 10px;
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #505858;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.8;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  z-index: 1;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #333;
+  line-height: 1.2;
+}
+
+h2:after {
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgb(165, 165, 165),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -moz-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -ms-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 100%;
+  content: "";
+  bottom: -30px;
+}
+
+.about_about-me {
+  margin-bottom: 30px;
+}
+
+.about_about-me p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.8px;
+  word-wrap: break-word;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.about_info ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.about_info ul li {
+  margin-bottom: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 2;
+  position: relative;
+  padding-left: 35px;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.about_info ul li svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  color: #f45032;
+  position: absolute;
+  left: 0px;
+  top: 8px;
+}
+
+.about_info ul li span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.about_info ul li a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.about_info ul li a:hover {
+  border-bottom-color: #000;
+}
+
+.about_button button{
+  background-color: #f45032;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 200px;
+  height: 60px;
+}
 footer {
   grid-area: f;
   background-color: blue;
   height: 1000px;
 }
+

@@ -49,15 +49,15 @@
         overflow: hidden;
     }
 
-    ul:before {
+    nav > ul:before {
         display: block;
     }
 
-    ul li {
+    nav ul li {
         padding: 12px 10px;
     }
 
-    ul li:last-child {
+    nav ul li:last-child {
         margin: 0;
     }
 }

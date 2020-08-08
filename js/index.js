@@ -51,3 +51,4 @@ document.querySelector(".header__logo > svg").addEventListener("click", () => {
     document.querySelector("nav ul").style.height = "221px";
   }
 });
+
