@@ -1,63 +1,97 @@
+@media (max-width: 425px) {
+  .about_info ul li {
+    line-height: 1.5;
+    font-size: 0.93rem;
+  }
+
+  .about_info ul li span {
+    font-size: 1rem;
+    min-width: 90px;
+  }
+}
+
 @media (max-width: 450px) {
-    header {
-        background-attachment: scroll;
-    }
-    
-    .header_inner-wrapper {
-        top: 25%;
-    }
+  header {
+    background-attachment: scroll;
+  }
 
-    .header_main__image {
-        height: 150px;
-        width: 150px;
-    }
+  .header_inner-wrapper {
+    top: 25%;
+  }
 
-    .header_main__name h1 {
-        font-size: 2rem;
-    }
+  .header_main__image {
+    height: 150px;
+    width: 150px;
+  }
 
-    .header_main__animated-text {
-        font-size: 1rem;
-    }
+  .header_main__name h1 {
+    font-size: 2rem;
+  }
 
-    .header_footer__arrow {
-        top: 170%;
-    }
+  .header_main__animated-text {
+    font-size: 1rem;
+  }
+
+  .header_footer__arrow {
+    top: 170%;
+  }
+
+  .about_info ul li svg {
+    top: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_about-me p {
+    letter-spacing: 0px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 750px) {
-    nav {
-        display: flex;
-        flex-direction: column;
-        padding: 15 16;
-    }
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 15 16;
+  }
 
-    .header__logo {
-        margin: 0;
-        padding: 0px 10px;
-    }
-    
-    .ham {
-        display: flex;
-    }
+  .header__logo {
+    margin: 0;
+    padding: 0px 10px;
+  }
 
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-        transition: height 0.6s ease-out;
-        height: 0px;
-        overflow: hidden;
-    }
+  .ham {
+    display: flex;
+  }
 
-    nav > ul:before {
-        display: block;
-    }
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+    transition: height 0.6s ease-out;
+    height: 0px;
+    overflow: hidden;
+  }
 
-    nav ul li {
-        padding: 12px 10px;
-    }
+  nav > ul:before {
+    display: block;
+  }
 
-    nav ul li:last-child {
-        margin: 0;
-    }
+  nav ul li {
+    padding: 12px 10px;
+  }
+
+  nav ul li:last-child {
+    margin: 0;
+  }
+
+  .about_about-me p {
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (max-width: 830px) {
+  .about_info ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }
