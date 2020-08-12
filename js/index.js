@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function showPage() { 
+window.addEventListener("load", function showPage() { 
   document.querySelector(".preloader").style.display = "none";
   document.querySelector(".wrapper").style.display = "block";
 });
