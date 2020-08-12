@@ -67,7 +67,7 @@
 
 header {
   grid-area: h;
-  background-image: url("../img/header-background.jpg");
+  background-image: url("../img/header/header-background.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -318,7 +318,7 @@ nav ul li a:hover {
   width: 16px;
   height: 20px;
   top: 150%;
-  background-image: url(../img/down-arrow.png);
+  background-image: url(../img/header/down-arrow.png);
   background-size: contain;
   color: white;
   font-size: 10px;
@@ -353,7 +353,7 @@ main {
   padding: 80px 5%;
 }
 
-.about_header {
+.header--mod {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -502,6 +502,67 @@ h2:after {
   text-decoration: none;
   color: white;
 }
+
+.skills_inner-wrapper {
+  background-color: #f9f9f9;
+  padding: 80px 5%;
+}
+
+.skills_items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+  gap: 40px;
+}
+
+.skills__flip-card {
+  background-color: transparent;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.skills__flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.skills__flip-card:hover .skills__flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+.skills__flip-card-front, .skills__flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.skills__flip-card-front {
+  background-color: white;
+  color: black;
+  background-image: url("../img/skills/skills-background-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills__flip-card-back {
+  background-color: #f45032;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+
+
 footer {
   grid-area: f;
   background-color: blue;
