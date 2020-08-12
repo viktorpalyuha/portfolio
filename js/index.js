@@ -1,7 +1,7 @@
-setTimeout(function showPage() {
+document.addEventListener("DOMContentLoaded", function showPage() { 
   document.querySelector(".preloader").style.display = "none";
   document.querySelector(".wrapper").style.display = "block";
-}, 3000);
+});
 
 let typewriter = new Typewriter("#animated-text", {
   autoStart: true,
