@@ -46,6 +46,11 @@
     letter-spacing: 0px;
     font-size: 14px;
   }
+
+  .skills_items {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 750px) {
@@ -93,5 +98,11 @@
   .about_info ul {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .skills_items {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
   }
 }

@@ -512,7 +512,6 @@ h2:after {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 5px;
   gap: 40px;
 }
 
@@ -559,6 +558,11 @@ h2:after {
   background-color: #f45032;
   color: white;
   transform: rotateX(180deg);
+}
+
+.skills__flip-card-front_background_white {
+  box-shadow: inset 0px 0px 60px 0px rgba(255,255,255,1);
+  border-radius: 50%;
 }
 
 
