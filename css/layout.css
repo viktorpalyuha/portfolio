@@ -1,55 +1,13 @@
-@media (max-width: 425px) {
-  .about_info ul li {
-    line-height: 1.5;
-    font-size: 0.93rem;
-  }
-
-  .about_info ul li span {
-    font-size: 1rem;
-    min-width: 90px;
-  }
-}
-
-@media (max-width: 450px) {
-  header {
-    background-attachment: scroll;
-  }
-
-  .header_inner-wrapper {
-    top: 25%;
-  }
-
-  .header_main__image {
-    height: 150px;
-    width: 150px;
-  }
-
-  .header_main__name h1 {
-    font-size: 2rem;
-  }
-
-  .header_main__animated-text {
-    font-size: 1rem;
-  }
-
-  .header_footer__arrow {
-    top: 170%;
-  }
-
-  .about_info ul li svg {
-    top: 0px;
-  }
-}
-
-@media (max-width: 480px) {
-  .about_about-me p {
-    letter-spacing: 0px;
-    font-size: 14px;
+@media (max-width: 830px) {
+  .about_info ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 
   .skills_items {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
   }
 }
 
@@ -94,15 +52,57 @@
   }
 }
 
-@media (max-width: 830px) {
-  .about_info ul {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+@media (max-width: 480px) {
+  .about_about-me p {
+    letter-spacing: 0px;
+    font-size: 14px;
   }
 
   .skills_items {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    background-attachment: scroll;
+  }
+
+  .header_inner-wrapper {
+    top: 25%;
+  }
+
+  .header_main__image {
+    height: 150px;
+    width: 150px;
+  }
+
+  .header_main__name h1 {
+    font-size: 2rem;
+  }
+
+  .header_main__animated-text {
+    font-size: 1rem;
+  }
+
+  .header_footer__arrow {
+    top: 170%;
+  }
+
+  .about_info ul li svg {
+    top: 0px;
+  }
+}
+
+@media (max-width: 425px) {
+  .about_info ul li {
+    line-height: 1.5;
+    font-size: 0.93rem;
+  }
+
+  .about_info ul li span {
+    font-size: 1rem;
+    min-width: 90px;
   }
 }
