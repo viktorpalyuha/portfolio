@@ -2,36 +2,34 @@ window.addEventListener("load", function showPage() {
   let srcHeader = window.getComputedStyle(document.querySelector("header"), "")
     .backgroundImage;
   let urlHeader = srcHeader.match(/\((.*?)\)/)[1].replace(/('|")/g, "");
-
   let backgroundImgHeader = new Image();
+
   backgroundImgHeader.onload = function () {
     document.querySelector(".preloader").style.display = "none";
     document.querySelector(".wrapper").style.display = "block";
+
+    let typewriter = new Typewriter("#animated-text", {
+      autoStart: true,
+      delay: 75,
+      cursor: "",
+    });
+    
+    typewriter
+      .pauseFor(1000)
+      .typeString("Front-end devlp")
+      .deleteChars(2)
+      .pauseFor(250)
+      .typeString("eloper")
+      .start();
   };
 
   backgroundImgHeader.src = urlHeader;
 });
 
-
-
 // let srcSkills = window.getComputedStyle(document.querySelector(".skills__flip-card-front"), "").backgroundImage;
 // let urlSkills = srcSkills.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
 // let imgSkills = new Image();
 // imgSkills.src = urlSkills;
-
-let typewriter = new Typewriter("#animated-text", {
-  autoStart: true,
-  delay: 75,
-  cursor: "",
-});
-
-typewriter
-  .pauseFor(3400)
-  .typeString("Front-end devlp")
-  .deleteChars(2)
-  .pauseFor(250)
-  .typeString("eloper")
-  .start();
 
 window.addEventListener("scroll", function scrollFunction() {
   if (
