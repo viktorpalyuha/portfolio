@@ -1,7 +1,23 @@
-window.addEventListener("load", function showPage() { 
-  document.querySelector(".preloader").style.display = "none";
-  document.querySelector(".wrapper").style.display = "block";
+window.addEventListener("load", function showPage() {
+  let srcHeader = window.getComputedStyle(document.querySelector("header"), "")
+    .backgroundImage;
+  let urlHeader = srcHeader.match(/\((.*?)\)/)[1].replace(/('|")/g, "");
+
+  let backgroundImgHeader = new Image();
+  backgroundImgHeader.onload = function () {
+    document.querySelector(".preloader").style.display = "none";
+    document.querySelector(".wrapper").style.display = "block";
+  };
+
+  backgroundImgHeader.src = urlHeader;
 });
+
+
+
+// let srcSkills = window.getComputedStyle(document.querySelector(".skills__flip-card-front"), "").backgroundImage;
+// let urlSkills = srcSkills.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+// let imgSkills = new Image();
+// imgSkills.src = urlSkills;
 
 let typewriter = new Typewriter("#animated-text", {
   autoStart: true,
@@ -47,8 +63,7 @@ document.querySelector(".header__logo > svg").addEventListener("click", () => {
   document.querySelector(".header__logo > svg").classList.toggle("active");
   if (document.querySelector("nav ul").style.height == "221px") {
     document.querySelector("nav ul").style.height = "0px";
-  } else{
+  } else {
     document.querySelector("nav ul").style.height = "221px";
   }
 });
-
