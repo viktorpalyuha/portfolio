@@ -566,12 +566,20 @@ h2:after {
   background-image: url("../img/skills/skills-background-3.jpg");
 }
 
+.skills__flip-card-front_background_JS img {
+  height: 58px;
+}
+
 .skills__flip-card-front_background_Boostrap {
   background-image: url("../img/skills/skills-background-4.jpg");
 }
 
 .skills__flip-card-front_background_jQuery {
   background-image: url("../img/skills/skills-background-5.jpg");
+}
+
+.skills__flip-card-front_background_jQuery img {
+  height: 50px;
 }
 
 .skills__flip-card-front_background_React {
