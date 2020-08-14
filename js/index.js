@@ -16,9 +16,9 @@ window.addEventListener("load", function showPage() {
     
     typewriter
       .pauseFor(1000)
-      .typeString("Front-end devlp")
-      .deleteChars(2)
+      .typeString("Front-end devil")
       .pauseFor(250)
+      .deleteChars(2)
       .typeString("eloper")
       .start();
   };
