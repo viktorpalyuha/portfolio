@@ -602,6 +602,118 @@ h2:after {
   transform: rotateX(180deg);
 }
 
+.portfolio_inner-wrapper {
+  background-color: white;
+  padding: 80px 5%;
+}
+
+.portfolio_works {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.portfolio__item {
+  background-size: contain;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+}
+
+.portfolio__item_background_RomanNumeralConverter {
+  background-image: url("../img/portfolio/works/roman-numeral-converter.png");
+}
+
+.portfolio__item_background_CaesarsCipher {
+  background-image: url("../img/portfolio/works/caesars-cipher.png");
+}
+
+.portfolio__item_background_Palindrome {
+  background-image: url("../img/portfolio/works/palindrome-checker.png");
+}
+
+.portfolio__item_background_MoGo {
+  background-image: url("../img/portfolio/works/MoGo.png");
+}
+
+.portfolio__item_background_FlatStyle {
+  background-image: url("../img/portfolio/works/FlatStyle.png");
+}
+
+.portfolio__item_background_PhotoCage {
+  background-image: url("../img/portfolio/works/PhotoCage.png");
+}
+
+.portfolio__item_background_PowerNap {
+  background-image: url("../img/portfolio/works/PowerNap.png");
+}
+
+.portfolio__item_background_Calculator {
+  background-image: url("../img/portfolio/works/calculator.png");
+}
+
+.contact_inner-wrapper {
+  background-color: #f9f9f9;
+  padding: 80px 5%;
+}
+
+.contact_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.contact_form__item {
+  font-family: "Open Sans", sans-serif;
+  border-radius: 2px;
+  color: #495057;
+}
+
+.contact_form__item:nth-last-child(-n + 3) {
+  grid-column: 1 / 3;
+}
+
+.contact_form__item:not(#message, button) {
+  height: 27px;
+}
+
+.contact_form__item:not(:last-child) {
+  padding: 15px 30px;
+  border: 1px solid #f9f9f9;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.contact_form #message {
+  resize: none;
+  grid-row: 3 / 5;
+}
+
+.contact_form button {
+  user-select: none;
+  border: 1px solid transparent;
+  line-height: 1.5;
+  padding: 12px 50px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: #fd735a;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  max-width: 140px;
+  height: 40px;
+  cursor: pointer;
+  justify-self: center;
+  transition: all .3s linear;
+}
+
+.contact_form button:hover, .contact_form button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em;
+  transform: translateY(-0.25em);
+}
+
 footer {
   grid-area: f;
   background-color: blue;

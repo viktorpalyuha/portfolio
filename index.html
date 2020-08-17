@@ -383,11 +383,7 @@
                       class="skills__flip-card-front skills__flip-card-front_background_HTML5"
                     >
                       <div class="skills__flip-card-front_background_white">
-                        <img
-                          src="img/skills/html5.png"
-                          class=""
-                          alt="HTML5 icon"
-                        />
+                        <img src="img/skills/html5.png" alt="HTML5 icon" />
                       </div>
                     </div>
                     <div class="skills__flip-card-back">
@@ -518,8 +514,51 @@
             </div>
           </div>
         </div>
+        <div class="portfolio_inner-wrapper" id="portfolio">
+          <div class="portfolio_header header--mod">
+            <span class="sup-h2">MY WORKS</span>
+            <h2>PORTFOLIO</h2>
+          </div>
+          <div class="portfolio_works">
+            <div
+              class="portfolio__item portfolio__item_background_RomanNumeralConverter"
+            ></div>
+            <div
+              class="portfolio__item portfolio__item_background_CaesarsCipher"
+            ></div>
+            <div
+              class="portfolio__item portfolio__item_background_Palindrome"
+            ></div>
+            <div class="portfolio__item portfolio__item_background_MoGo"></div>
+            <div
+              class="portfolio__item portfolio__item_background_FlatStyle"
+            ></div>
+            <div
+              class="portfolio__item portfolio__item_background_PhotoCage"
+            ></div>
+            <div
+              class="portfolio__item portfolio__item_background_PowerNap"
+            ></div>
+            <div
+              class="portfolio__item portfolio__item_background_Calculator"
+            ></div>
+          </div>
+        </div>
+        <div class="contact_inner-wrapper" id="contact">
+          <div class="contat_header header--mod">
+            <span class="sup-h2">GET IN TOUCH</span>
+            <h2>CONTACT</h2>
+          </div>
+          <form action="https://formspree.io/xyynaynd" method="POST" class="contact_form">
+            <input type="text" name="name" id="name" class="contact_form__item" placeholder="Your Name" required>
+            <input type="email" name="email" id="email" class="contact_form__item" placeholder="Your Email" required>
+            <input type="text" name="subject" id="subject" class="contact_form__item" placeholder="Your Subject" required>
+            <textarea name="message" id="message" cols="30" class="contact_form__item" rows="4" placeholder="Your message"></textarea>
+            <button type="submit" class="contact_form__item">SEND</button>
+          </form>
+        </div>
       </main>
-      <footer id="contact"></footer>
+      <footer id="footer"></footer>
     </div>
 
     <script type="module" src="js/index.js"></script>
