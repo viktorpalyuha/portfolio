@@ -658,6 +658,52 @@ h2:after {
   padding: 80px 5%;
 }
 
+.contact_social-networks {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_social-networks__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.contact_social-networks__item:hover,
+.contact_social-networks__item:focus {
+  animation: shake 1s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+
+  20% {
+    transform: translateX(-4px) rotate(-4deg);
+  }
+
+  40% {
+    transform: translateX(-2px) rotate(-2deg);
+  }
+
+  60% {
+    transform: translateX(4px) rotate(4deg);
+  }
+
+  80% {
+    transform: translateX(2px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+.contact_social-networks img {
+  width: 35px;
+}
+
 .contact_form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -706,12 +752,13 @@ h2:after {
   height: 40px;
   cursor: pointer;
   justify-self: center;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
-.contact_form button:hover, .contact_form button:focus {
+.contact_form button:hover,
+.contact_form button:focus {
   box-shadow: 0 0.5em 0.5em -0.4em;
-  transform: translateY(-0.25em);
+  transform: translateY(-0.4em);
 }
 
 footer {

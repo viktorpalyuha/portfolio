@@ -50,6 +50,20 @@
   .about_about-me p {
     letter-spacing: 0.4px;
   }
+
+  .contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .contact_form__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .contact_form button {
+    align-self: center;
+  }
 }
 
 @media (max-width: 480px) {
