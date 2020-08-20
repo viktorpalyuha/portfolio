@@ -31,10 +31,31 @@ window.addEventListener("load", function showPage() {
 // let imgSkills = new Image();
 // imgSkills.src = urlSkills;
 
-window.addEventListener("scroll", function scrollFunction() {
+let sections = document.querySelectorAll("#home, #about, #skills, #portfolio, #contact");
+let menuLinks = document.querySelectorAll(".nav__item");
+let navHeight = 100;
+let makeActive = link => menuLinks[link].classList.add("active");
+let removeActive = link => menuLinks[link].classList.remove("active");
+let removeAllActive = () => [...Array(sections.length).keys()].map( link => removeActive(link));
+let currentActive = 0;
+
+window.addEventListener("scroll", () => {
+
+  // SCROLL SPY
+
+  let current = sections.length - [...sections].reverse().findIndex( section => window.scrollY >= section.offsetTop - navHeight) - 1;
+
+  if (current !== currentActive) {
+    removeAllActive();
+    currentActive = current;
+    makeActive(current);
+  }
+
+  // SHOW NAVBAR ONSCROLL
+
   if (
-    document.body.scrollTop >= 400 ||
-    document.documentElement.scrollTop >= 400
+    document.body.scrollTop >= 500 ||
+    document.documentElement.scrollTop >= 500
   ) {
     document.querySelector("nav").classList.remove("hidden");
     document.querySelector("nav").classList.add("visible");
@@ -44,19 +65,6 @@ window.addEventListener("scroll", function scrollFunction() {
   }
 });
 
-let navItems = document.getElementsByClassName("nav__item");
-
-for (let i = 0; i < navItems.length; i++) {
-  navItems[i].addEventListener("click", () => {
-    for (let j = 0; j < navItems.length; j++) {
-      if (navItems[j].classList.contains("active")) {
-        navItems[j].classList.remove("active");
-      }
-    }
-    navItems[i].classList.add("active");
-  });
-}
-
 document.querySelector(".header__logo > svg").addEventListener("click", () => {
   document.querySelector(".header__logo > svg").classList.toggle("active");
   if (document.querySelector("nav ul").style.height == "221px") {
@@ -65,3 +73,19 @@ document.querySelector(".header__logo > svg").addEventListener("click", () => {
     document.querySelector("nav ul").style.height = "221px";
   }
 });
+
+
+// ADD ACTIVE ON CLICK FUNCTION
+
+// let navItems = document.getElementsByClassName("nav__item");
+
+// for (let i = 0; i < navItems.length; i++) {
+//   navItems[i].addEventListener("click", () => {
+//     for (let j = 0; j < navItems.length; j++) {
+//       if (navItems[j].classList.contains("active")) {
+//         navItems[j].classList.remove("active");
+//       }
+//     }
+//     navItems[i].classList.add("active");
+//   });
+// }
