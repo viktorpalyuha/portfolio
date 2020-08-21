@@ -84,7 +84,7 @@ nav {
   display: grid;
   visibility: hidden;
   grid-template-columns: 1fr 1fr;
-  z-index: 2;
+  z-index: 999;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -610,14 +610,73 @@ h2:after {
 .portfolio_works {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  grid-gap: 15px;
+  grid-template-rows: repeat(7, 5vw);
+  gap: 15px;
+}
+
+.portfolio__item {
+  overflow: hidden;
+}
+
+.portfolio__item_top-panel, 
+.portfolio__item_bottom-panel {
+  width: 100%;
+  height: 50%;
+  float: left;
+  z-index: 2;
+  position: relative;
+  background: white;
+  transition: transform 0.4s ease, opacity 1s ease ;
+  overflow: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.portfolio__item_top-panel p {
+  color: #f45032;
+  font-family: "Open Sans", sans-serif;
+}
+
+.portfolio__item_top-panel {
+  transform: translateY(-100%);
+}
+
+.portfolio__item_bottom-panel button{
+  border: 2px solid #f45032;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 1rem;
+  width: 170px;
+  padding: 7px 0px;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+.portfolio__item_bottom-panel button:hover {
+  background-color: #f45032; 
+  color: white;
+}
+
+.portfolio__item_bottom-panel {
+  transform: translateY(100%);
 }
 
 .portfolio__item img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: translateY(-100%);
+}
+
+.portfolio__item:hover .portfolio__item_top-panel, .portfolio__item:hover .portfolio__item_bottom-panel {
+    transform: translateY(0%);
+    opacity: 1;
 }
 
 .portfolio__item_RomanNumeralConverter {
@@ -756,14 +815,14 @@ h2:after {
   font-size: 12px;
   letter-spacing: 2px;
   color: #fff;
-  background-color: #fd735a;
+  background-color: #f45032;
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   max-width: 140px;
   height: 40px;
   cursor: pointer;
   justify-self: center;
-  transition: all 0.3s linear;
+  transition: box-shadow 0.3s linear, transform 0.3s linear;
 }
 
 .contact_form button:hover,
