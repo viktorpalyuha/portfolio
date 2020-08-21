@@ -9,6 +9,31 @@
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
   }
+
+  .portfolio_works {
+    grid-template-rows: repeat(13, 5vw);
+    gap: 10px;
+  }
+
+  .portfolio__item_RomanNumeralConverter {
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
+  }
+
+  .portfolio__item_CaesarsCipher {
+    grid-column: 1 / 4;
+    grid-row: 5 / 9;
+  }
+
+  .portfolio__item_Palindrome {
+    grid-column: 1 / 4;
+    grid-row: 9 / 13;
+  }
+
+  .portfolio__item_MoGo {
+    grid-column: 4 / 9;
+    grid-row: 1 / 7;
+  }
 }
 
 @media (max-width: 750px) {
