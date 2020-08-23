@@ -604,10 +604,12 @@ h2:after {
 
 .skills__flip-card-back h1 {
   margin-top: 15px;
+  font-family: "Open Sans", sans-serif; 
 }
 
 .skills__flip-card-back p {
   margin-top: 20px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .portfolio_inner-wrapper {
