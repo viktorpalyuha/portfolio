@@ -184,4 +184,8 @@
     font-size: 1rem;
     min-width: 90px;
   }
+
+  .footer_inner-wrapper p {
+    font-size: 0.7em;
+  }
 }
